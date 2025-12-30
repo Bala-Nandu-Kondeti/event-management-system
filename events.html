@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+</head>
+<body>
+    <h2>All Events</h2>
+    <div id="eventList"></div>
+
+    <script>
+        fetch('/api/events')
+        .then(res => res.json())
+        .then(data => {
+            let html = '';
+            data.forEach(event => {
+                html += `
+                    <h3>${event.title}</h3>
+                    <p>${event.description}</p>
+                    <p>${event.event_date} at ${event.event_time}</p>
+                    <hr>
+                `;
+            });
+            document.getElementById('eventList').innerHTML = html;
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Events</title>
+    <link rel="stylesheet" href="css/events.css">
+</head>
+<body>
+
+<header>
+    <h1>College Events</h1>
+    <input type="text" id="searchInput" placeholder="Search events...">
+</header>
+
+<main>
+    <div id="eventsGrid" class="grid"></div>
+    <img src="uploads/default.jpg">
+
+</main>
+
+<script src="js/events.js"></script>
+</body>
+</html>
+
