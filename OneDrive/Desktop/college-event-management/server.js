@@ -84,7 +84,7 @@ app.get("/events", (req, res) => {
       events,
       isAdmin: req.session.user?.role === "admin"
     });
-  });
+  });cx          
 });
 
 
@@ -137,6 +137,14 @@ app.get("/delete/:id", isAdmin, (req, res) => {
     if (err) return res.send("Delete failed");
     res.redirect("/admin");
   });
+});
+app.get("/",(req,res)=>{
+  const events={
+    title:"farewell party",
+    date:"2025-01-10",
+    image:"bg.jpg"
+  }
+  res.render("index" { events});
 });
 
 /* ================= SERVER ================= */
