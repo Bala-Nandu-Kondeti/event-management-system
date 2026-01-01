@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Event</title>
+</head>
+<body>
+    <h2>Create Event</h2>
+
+    <form action="/api/events/create" method="post">
+        <input type="text" name="title" placeholder="Event Title" required><br><br>
+        <textarea name="description" placeholder="Description"></textarea><br><br>
+        <input type="date" name="event_date" required><br><br>
+        <input type="time" name="event_time" required><br><br>
+        <input type="text" name="venue" placeholder="Venue" required><br><br>
+        <input type="text" name="image" placeholder="Image name"><br><br>
+        <input type="number" name="created_by" placeholder="Admin ID"><br><br>
+        <button type="submit">Create Event</button>
+    </form>
+</body>
+</html>

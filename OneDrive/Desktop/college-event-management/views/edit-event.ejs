@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Event</title>
+</head>
+<body class="container mt-4">
+
+<h3>Edit Event</h3>
+
+<form action="/update/<%= event.id %>" method="POST">
+    <input name="title" value="<%= event.title %>" class="form-control mb-2">
+    <textarea name="description" class="form-control mb-2"><%= event.description %></textarea>
+    <input type="date" name="event_date" value="<%= event.event_date %>" class="form-control mb-2">
+    <input type="time" name="event_time" value="<%= event.event_time %>" class="form-control mb-2">
+    <input name="venue" value="<%= event.venue %>" class="form-control mb-2">
+    <button class="btn btn-primary">Update</button>
+</form>
+
+</body>
+</html>

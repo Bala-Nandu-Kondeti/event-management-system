@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+</head>
+<body>
+
+<h1>Events Loaded</h1>
+
+<% if (events.length === 0) { %>
+    <p>No events found</p>
+<% } %>
+
+<ul>
+    <% events.forEach(e => { %>
+        <li><%= e.title %> - <%= e.date %></li>
+    <% }) %>
+
+</ul>
+<img src="/images/<%= event.image %>" alt="<%= event.title %>">
+
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<h3>Edit Event</h3>
+
+<form action="/update/<%= event.id %>" method="POST">
+  <input class="form-control mb-2" name="title" value="<%= event.title %>">
+  <textarea class="form-control mb-2" name="description"><%= event.description %></textarea>
+  <input class="form-control mb-2" type="date" name="event_date" value="<%= event.event_date %>">
+  <input class="form-control mb-2" type="time" name="event_time" value="<%= event.event_time %>">
+  <input class="form-control mb-2" name="venue" value="<%= event.venue %>">
+  <button class="btn btn-success">Update</button>
+</form>
