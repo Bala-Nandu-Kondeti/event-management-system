@@ -19,6 +19,8 @@
 </ul>
 <img src="/images/<%= event.image %>" alt="<%= event.title %>">
 
-
+app.get("/",(req,res)=>{
+    res.render("index");
+});
 </body>
 </html>
